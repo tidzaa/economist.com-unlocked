@@ -32,22 +32,7 @@ let loadCustomPage = () => {
     };
 }
 
-let removeSubscription = (htmlContentStr)=>{
-    let wrapper = document.createElement("DIV");
-    wrapper.innerHTML = htmlContentStr;
 
-    let paywalls = wrapper.querySelectorAll(".paywall");
-    let subscriptions = wrapper.querySelectorAll(".subscription-benefits");
-
-    paywalls.forEach((paywall) => {
-        paywall.remove()
-    })
-    subscriptions.forEach((subscription) => {
-        subscription.remove()
-    })
-
-    document.documentElement.innerHTML = "Removing the Ads..."
-    removeAds(wrapper.innerHTML)
 }
 
 let removeAds = (htmlContentStr) => {
